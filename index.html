@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.scss">
     <title>File upload</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -11,19 +12,28 @@
     <em style="color: darkred; font-size: 14px;">*Файл должен быть не более 2 МБ</em>
     <p></p>
     <form class="forma" action="form.php" method="post" enctype="multipart/form-data">
-        <input class="upload" type="file" id="file" name="filename">
-        <button class="btn" type="button" id="delete">Удалить выбранный файл</button>
+        <input class="upload" type="file" name="filename">
+        <button class="btn" type="button">Удалить выбранный файл</button>
         <input class="subm" type="submit" value="Отправить">
     </form>
 </div>
     <!--обработчик кнопки "удалить"-->
     <script>
-        file = document.querySelector('#file');
-        button = document.querySelector('#delete');
-        button.addEventListener('click', function(){
-            var newElem = document.createElement('input');
-            newElem.type = 'file';
-            button.parentNode.replaceChild(newElem, file);
+        $(document).ready(function (){
+            file = document.querySelector('[name = "filename"]');
+            button = document.querySelector('[type = "button"]');
+            button.addEventListener('click', function(){
+                var newElem = document.createElement('input');
+                newElem.setAttribute('type', 'file');
+                newElem.setAttribute('name', 'filename');
+                newElem.setAttribute('class', 'upload');
+                button.parentNode.replaceChild(newElem, file);
+                if(newElem){
+                    button.addEventListener('click', function(){
+                        button.parentNode.replaceChild(file, newElem);
+                    });
+                }
+            });
         });
     </script>
 </body>
