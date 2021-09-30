@@ -3,6 +3,8 @@ A simple form for uploading a file to the server. Consists of: html-form, "delet
 <br>
 The Open Server Panel was used to work with the code.
 <br>
+The file is saved on the server in the folder "temp", it should be created in the project directory! (Файл сохраняется на сервере в папке "temp", ее необходимо создать в директории проекта)
+<br>
 <br>
 ![upload](https://user-images.githubusercontent.com/78618492/135505109-d2fa46b9-6654-4da0-9040-e97eb8b846a1.jpg)
 <br>
