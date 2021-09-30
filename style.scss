@@ -1,0 +1,32 @@
+body{
+  background-color: #ded5e3;
+  font-family: Arial;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.intro{
+  font-size: 25px;
+}
+.upload{
+  border: 0;
+  background-color: #786580;
+  color: white;
+}
+.btn{
+  display: block;
+  background-color: #ded5e3;
+  border: 0;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.subm{
+  width: 100%;
+  padding: 6px 0;
+  font-size: 16px;
+  border: 0;
+  background-color: #334a2e;
+  color: white;
+}
