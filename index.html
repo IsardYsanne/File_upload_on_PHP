@@ -22,14 +22,14 @@
         $(document).ready(function (){
             file = document.querySelector('[name = "filename"]');
             button = document.querySelector('[type = "button"]');
-            button.addEventListener('click', function(){
+            button.addEventListener('click', function del(){
                 var newElem = document.createElement('input');
                 newElem.setAttribute('type', 'file');
                 newElem.setAttribute('name', 'filename');
                 newElem.setAttribute('class', 'upload');
                 button.parentNode.replaceChild(newElem, file);
                 if(newElem){
-                    button.addEventListener('click', function(){
+                    button.addEventListener('click', function del2(){
                         button.parentNode.replaceChild(file, newElem);
                     });
                 }
